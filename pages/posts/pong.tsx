@@ -10,8 +10,8 @@ export default function Pong() {
 		document.body.className = 'bg-zinc-900';
 		if (canvasRef.current) {
 			const canvas = canvasRef.current;
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
+			canvas.width = 820;
+			canvas.height = 590;
 
 			const context = canvas.getContext('2d');
 			if (context) {
@@ -28,19 +28,26 @@ export default function Pong() {
 			let ballX: number = canvas.width / 2;
 			let ballY: number = canvas.height / 2;
 			if (ctx) {
+				ctx.strokeStyle = 'rgb(113 113 122)';
+				ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+				ctx.fillStyle = 'rgb(113 113 122)';
+				for (let h: number = 0; h < canvas.height; h += 20)
+					ctx.fillRect((canvas.width / 2) - 5, h , 10, 10);
+
 				ctx.fillStyle = 'white';
 				ctx.beginPath();
 				ctx.arc(ballX, ballY, 10, 0, Math.PI*2, true);
 				ctx.fill();
 
-				ctx.fillRect(0, (canvas.height / 2) - 50 , 10, 100);
-				ctx.fillRect(canvas.width - 5, (canvas.height / 2) - 50 , 10, 100);
+				ctx.fillRect(0, (canvas.height / 2) - 50 , 8, 90);
+				ctx.fillRect(canvas.width - 8, (canvas.height / 2) - 50 , 10, 90);
 			}
 		}
     }
 
     return (
-        <div className='w-full h-full flex justify-center items-center'>
+        <div className='w-full h-full flex flex-col justify-center items-center'>
             <div>
                 <button
                     id="start"
