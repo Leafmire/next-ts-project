@@ -4,9 +4,9 @@ import type {ReactNode} from 'react';
 type LayoutProps = {children?: ReactNode}
 const Layout = (props: LayoutProps) => (
   <motion.div
-    initial={{ x: 300, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x: 300, opacity: 0 }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
     transition={{
       type: "tween"
     }}
