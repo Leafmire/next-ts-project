@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
-import Layout from "@/components/Layout";
 
 export default function Example() {
   return (
-	<Layout>
 		<div className="relative isolate overflow-hidden bg-white">
 		<svg
 			className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -31,33 +29,21 @@ export default function Example() {
 				src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
 				alt="Your Company"
 			/>
-			<div className="mt-24 sm:mt-32 lg:mt-16">
-				<a href="#" className="inline-flex space-x-6">
-				<span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
-					What&apos;s new
-				</span>
-				<span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-					<span>Just shipped v1.0</span>
-					<ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-				</span>
-				</a>
-			</div>
 			<h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-				Deploy to the cloud with confidence
+				Welcome to 42 ft_transcendence Website
 			</h1>
 			<p className="mt-6 text-lg leading-8 text-gray-600">
-				Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-				fugiat veniam occaecat fugiat aliqua.
+				This site was made for Pong game with multiplayer. For playing, you must have 42 student account.
 			</p>
 			<div className="mt-10 flex items-center gap-x-6">
 				<Link
-				href="/"
+				href="/login"
 				className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 				>
-				Home
+				Login
 				</Link>
 				<a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-				Learn more <span aria-hidden="true">→</span>
+				How-to-play <span aria-hidden="true">→</span>
 				</a>
 			</div>
 			</div>
@@ -76,6 +62,5 @@ export default function Example() {
 			</div>
 		</div>
 		</div>
-	</Layout>
   )
 }
