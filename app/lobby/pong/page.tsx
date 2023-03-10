@@ -9,7 +9,7 @@ export default function Pong() {
     const [ctx, setCtx] = useState<CanvasRenderingContext2D>();
 
     useEffect(() => {
-		document.body.className = 'bg-zinc-900';
+		document.body.classList.add('bg-zinc-900');
 		if (canvasRef.current) {
 			const canvas = canvasRef.current;
 			canvas.width = 820;
@@ -22,6 +22,7 @@ export default function Pong() {
 				setCtx(context);
 			}
 		}
+		return () => document.body.classList.remove('bg-zinc-900');
     }, []);
 
     function drawElement() {

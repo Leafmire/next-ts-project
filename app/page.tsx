@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
-export default function Example() {
+export default function IndexPage() {
   return (
 		<div className="relative isolate overflow-hidden bg-white">
 		<svg

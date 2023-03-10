@@ -4,7 +4,7 @@ import {
   PaperClipIcon,
   UserIcon,
 } from '@heroicons/react/20/solid'
-import Button from '../components/button'
+import Button from '@/app/components/button'
 
 const attachments = [
   { name: 'resume_front_end_developer.pdf', href: '#' },
@@ -62,7 +62,7 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function MyProfile() {
   return (
     <>
       {/*
@@ -101,7 +101,7 @@ export default function Example() {
             </div>
             <div className="justify-stretch mt-6 flex flex-col-reverse space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-y-0 sm:space-x-3 sm:space-x-reverse md:mt-0 md:flex-row md:space-x-3">
 
-				<Button content="Edit" />
+				<Button content="Edit" route='/lobby/my-profile/account-settings' />
             </div>
           </div>
 
